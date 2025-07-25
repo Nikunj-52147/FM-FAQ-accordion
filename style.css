@@ -1,0 +1,170 @@
+
+:root{
+    --white: hsl(0, 100%, 100%);
+    --purle-100: hsl(275, 100%, 97%);
+    --purple-600: hsl(292, 16%, 49%);
+    --purple-950: hsl(292, 42%, 14%);
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  min-height: 100vh;
+  /* width: 100vw; */
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+body{
+   font-family: "Work Sans", sans-serif;
+   background: url("./assets/images/background-pattern-mobile.svg");
+   background-color: var(--purle-100);
+   background-repeat: no-repeat;
+   object-fit: cover;
+   display: grid;
+   place-content: center;
+   font-size: 0.825rem;
+}
+
+@media (min-width: 376px) {
+  body{
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    
+    /* background-size: 100% auto;
+    background-position: top center; */
+    /* font-size: 1rem; */
+  }
+}
+
+@media (min-width: 1400px) {
+  body{
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    
+    background-size: 100% auto;
+    background-position: top center;
+    /* font-size: 1rem; */
+  }
+}
+
+.faqs{
+
+    min-width: 300px;
+    margin: 9rem 1.5rem;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow:  0px 36px 48px -5px hsla(293, 16%, 49%, 0.25);
+}
+
+@media (min-width: 376px) {
+  .faqs{
+    max-width: 400px;
+  }
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+    img{
+        width: 1.125rem;
+    }
+}
+
+@media (min-width: 376px) {
+  .heading img{
+    width: 1.5rem;
+  }
+}
+
+.title{
+    font-size: 1.75rem;
+    color: var(--purple-950);
+}
+
+@media (min-width: 376px) {
+  .title{
+    font-size: 2rem;
+  }
+}
+
+
+.question-block{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: var(--purple-950);
+    font-weight: var(--fw-600);
+    img{
+        width: 1.75rem;
+    }
+}
+
+.question-block:hover{
+    color: var(--purple-600);
+    cursor: pointer;
+}
+
+.question-block:focus{
+  outline: none;
+  color: var(--purple-600); 
+}
+
+.answer{
+  display: none;
+}
+
+.answer.visible{
+  display: block;
+}
+
